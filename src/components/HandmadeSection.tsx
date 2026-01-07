@@ -4,7 +4,7 @@ function HandmadeSection() {
 			<div className="bg-amber-100 w-[25%]"> </div>
 
 			<div className="w-[50%] text-center">
-				<h1 className="pt-24 pb-6 text-3xl font-bold"> Feitos a Mão </h1>
+				<h1 className="pt-24 pb-6 text-3xl font-bold"> Peças Feitas a Mão </h1>
 
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim eos iste praesentium commodi? Ab officia esse cumque quam autem id

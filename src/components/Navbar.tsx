@@ -12,7 +12,7 @@ function Navbar() {
 				</ul>
 			</nav>
 
-			<img src={logo} alt="Logo" className="cols-start-2 justify-self-center" />
+			<img src={logo} alt="Logo" className="cols-start-2 justify-self-center w-37" />
 
 			<div className="cols-start-3 justify-self-end pt-8">
 				<button> Contato </button>
