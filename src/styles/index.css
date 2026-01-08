@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@import "./components.css";
+
 @import "./home.css";
 
 @font-face {
