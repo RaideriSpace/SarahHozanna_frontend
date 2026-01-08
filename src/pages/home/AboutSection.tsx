@@ -1,10 +1,11 @@
+import sarah_photo from "../../assets/home_img/process_4.jpg";
+
 function AboutSection() {
 	return (
-		<section className="flex flex-col items-center">
-			<h2 className="text-center text-3xl font-bold pb-8"> Quem Sou </h2>
-
-			<div className="flex justify-center items-center">
-				<div className="w-[60%]">
+		<section className="flex flex-col items-center bg-pink-100 py-8">
+			<div className="flex justify-center items-center gap-8">
+				<div className="w-[50%]">
+					<h2 className="text-center text-3xl font-bold pb-8"> Quem Sou </h2>
 					<p>
 						Pellentesque morbi purus urna tempor vitae metus lacus porta mattis. Id risus tortor gravida convallis ut cursus nunc consequat mi. Mattis
 						sed justo maecenas in proin sed adipiscing velit. Fringilla vestibulum quis amet ac adipiscing vitae diam mauris. Lorem ac mattis
@@ -20,7 +21,7 @@ function AboutSection() {
 						pharetra nisl nisl elementum.
 					</p>
 				</div>
-				<img src="" alt="Foto da Estilista Sarah Hozanna" className="w-[30%] h-125" />
+				<img src={sarah_photo} alt="Foto da Estilista Sarah Hozanna" className="w-[30%] h-125 object-cover rounded-tl-[30%] rounded-br-[30%]" />
 			</div>
 		</section>
 	);
