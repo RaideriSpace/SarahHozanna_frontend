@@ -27,7 +27,6 @@ function Footer() {
 				<small className="py-4 text-center">
 					Copyright SarahHozanna - Desenvolvido por{" "}
 					<a href="https://raiderispace.vercel.app/" rel="noopener noreferrer" target="_blank">
-						{" "}
 						@RaideriSpace.
 					</a>
 					<br /> @2026. Todos os direitos reservados.

@@ -20,7 +20,7 @@ function AboutSection() {
 						pharetra nisl nisl elementum.
 					</p>
 				</div>
-				<img src="" alt="Foto da Estilista Sarah Hozanna" className="w-[30%] h-[500px]" />
+				<img src="" alt="Foto da Estilista Sarah Hozanna" className="w-[30%] h-125" />
 			</div>
 		</section>
 	);
