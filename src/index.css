@@ -1,3 +1,7 @@
 @import "./reset.css";
+
 @import "tailwindcss";
 
+.hero {
+  background-image: url(./assets/hero.svg);
+}
