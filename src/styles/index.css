@@ -3,3 +3,25 @@
 @import "tailwindcss";
 
 @import "./home.css";
+
+@font-face {
+  font-family: "Delicate Caligraphy";
+  src: url("../assets/fonts/DelicateCaligraphyDemo.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Glow Night";
+  src: url("../assets/fonts/GLOWNIGHT.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+.delicate {
+  font-family: "Delicate Caligraphy", sans-serif;
+}
+
+.glow {
+  font-family: "Glow Night", sans-serif;
+}
