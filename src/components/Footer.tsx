@@ -11,13 +11,13 @@ function Footer() {
 					<img src={logo} alt="Logo escrito Sarah Hozanna estilizado com um manequim e uma agulha" className="w-80" />
 					<div className="flex justify-center gap-4 pt-2">
 						<a href="https://www.instagram.com/sarahhozanna" rel="noopener noreferrer" target="_blank">
-							<ImInstagram size={30} />
+							<ImInstagram size={30} className="transition-all hover:text-pink-700"/>
 						</a>
 						<a href="https://wa.me/5511989157255" rel="noopener noreferrer" target="_blank">
-							<PiWhatsappLogoDuotone size={30} />
+							<PiWhatsappLogoDuotone size={30} className="transition-all hover:text-pink-700"/>
 						</a>
 						<a href="https://www.facebook.com/sarahsillysad" rel="noopener noreferrer" target="_blank">
-							<ImFacebook2 size={30} />
+							<ImFacebook2 size={30} className="transition-all hover:text-pink-700"/>
 						</a>
 					</div>
 				</div>
