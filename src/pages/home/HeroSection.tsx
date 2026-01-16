@@ -8,7 +8,7 @@ function HeroImg() {
 				<h2 className="delicate text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-amber-800 h-20 content-center">
 					Para Momentos Únicos
 				</h2>
-				<p className="text-xl pb-5">
+				<p className="text-xl pb-5 text-gray-300">
 					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> e cada <br />
 					detalhe conta a <strong> sua história </strong>. Sinta o cuidado de uma peça <br />
 					feita <strong> exclusivamente </strong> para você.
