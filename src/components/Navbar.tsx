@@ -15,7 +15,7 @@ function Navbar() {
 			<img src={logo} alt="Logo" className="cols-start-2 justify-self-center w-37" />
 
 			<div className="cols-start-3 justify-self-end pt-4">
-				<button className="contact text-gray-600 before:bg-pink-200">
+				<button className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
 					<span>Contato</span>
 				</button>
 			</div>

@@ -1,6 +1,6 @@
 function HeroImg() {
 	return (
-		<section className="hero w-full h-screen flex">
+		<section className="hero w-full md:h-screen flex">
 			<div className="self-end pl-20 pb-30 flex flex-col">
 				<h1 className="glow text-7xl font-bold text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-amber-800 h-30 content-end">
 					PEÇAS ÚNICAS

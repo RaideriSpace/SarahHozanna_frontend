@@ -1,13 +1,13 @@
 function HandmadeSection() {
 	return (
-		<section className="w-full flex gap-4">
+		<section className="w-full flex gap-4 md:px-20">
 			<div className=" w-[25%] flex flex-col items-center justify-evenly gap-16">
-				<div className="bg-img-1 w-[85%] h-100 rounded-2xl"></div>
-				<div className="bg-img-3 w-[85%] h-100 rounded-2xl"></div>
-				<div className="bg-img-5 w-[85%] h-100 rounded-2xl"></div>
+				<div className="bg-img-1 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
+				<div className="bg-img-3 w-[85%] h-100 rounded-2xl -rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
+				<div className="bg-img-5 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
 			</div>
 
-			<div className="w-[50%] py-20">
+			<div className="w-[50%] py-20 px-5">
 				<div className="text-center">
 					<h2 className="text-4xl font-bold"> A Alma em Cada Ponto </h2>
 					<h3 className="pb-6 text-2xl font-medium"> A Magia das Peças Feitas à Mão </h3>
@@ -19,6 +19,7 @@ function HandmadeSection() {
 					referindo apenas a fios, tecidos ou agulhas. Estamos falando de um processo íntimo, onde cada ponto carrega consigo uma carga imensa de{" "}
 					<strong>amor, carinho e cuidado</strong>.
 				</p>
+				<br />
 				<p>
 					Diferente das máquinas industriais que replicam padrões em milissegundos, as mãos de um artesão trabalham no ritmo do coração. Existe uma
 					intenção genuína por trás de cada escolha, desde a seleção da matéria-prima até o arremate final. Esse cuidado se traduz em uma qualidade
@@ -26,12 +27,12 @@ function HandmadeSection() {
 					construído para durar gerações.
 				</p>
 
-				<h4 className="py-4 text-2xl font-semibold text-center"> Por que o Artesanal é Tão Importante? </h4>
+				<h4 className="py-8 text-2xl font-semibold text-center"> Por que o Artesanal é Tão Importante? </h4>
 				<p>
 					A importância das peças feitas à mão vai muito além da estética. Elas representam uma resistência cultural e emocional através de pilares
 					fundamentais:
 				</p>
-				<ul className="flex flex-col gap-3 pt-3 text-center">
+				<ul className="flex flex-col gap-6 pt-3 text-center">
 					<li>
 						<strong>Singularidade:</strong> <br /> Nenhuma peça manual é idêntica à outra. Mesmo seguindo o mesmo molde, a pressão do ponto ou a
 						sutileza do corte tornam aquela peça única no mundo, assim como quem a veste.
@@ -49,19 +50,19 @@ function HandmadeSection() {
 						Esse afeto é sentido no corpo, proporcionando um conforto que transpassa o tecido.
 					</li>
 				</ul>
-				<h4 className="py-4 text-2xl font-semibold text-center"> O Luxo da Atenção aos Detalhes </h4>
+				<h4 className="py-8 text-2xl font-semibold text-center"> O Luxo da Atenção aos Detalhes </h4>
 				<p>
 					O verdadeiro luxo contemporâneo não está na logomarca, mas na atenção. O cuidado de quem molda uma gola, borda um detalhe ou tece uma trama
 					de tricô reflete um compromisso com a excelência que as grandes fábricas ignoram. É a celebração do erro humano que se torna detalhe
-					charmoso, da textura que conta uma história e da peça que se torna uma extensão da identidade de quem a possui. <br /> Valorizar o vestuário
-					artesanal é, em última análise, valorizar a humanidade. É escolher colocar no mundo — e sobre a própria pele — algo que nasceu do desejo de
-					criar beleza com as próprias mãos, garantindo que a tradição do cuidado nunca saia de moda.
+					charmoso, da textura que conta uma história e da peça que se torna uma extensão da identidade de quem a possui. <br /> <br /> Valorizar o
+					vestuário artesanal é, em última análise, valorizar a humanidade. É escolher colocar no mundo — e sobre a própria pele — algo que nasceu do
+					desejo de criar beleza com as próprias mãos, garantindo que a tradição do cuidado nunca saia de moda.
 				</p>
 			</div>
 
 			<div className="w-[25%] flex flex-col items-center justify-evenly gap-8">
-				<div className="bg-img-2 w-[85%] h-100 rounded-2xl"></div>
-				<div className="bg-img-4 w-[85%] h-100 rounded-2xl"></div>
+				<div className="bg-img-2 w-[85%] h-100 rounded-2xl -rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
+				<div className="bg-img-4 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
 			</div>
 		</section>
 	);
