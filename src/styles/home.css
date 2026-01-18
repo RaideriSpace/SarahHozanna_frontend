@@ -1,5 +1,6 @@
 .hero {
   background-image: url(../assets/home_img/hero.svg);
+  background-size: cover;
 }
 
 .bg-img-1 {

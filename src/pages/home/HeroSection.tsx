@@ -1,17 +1,12 @@
 function HeroImg() {
 	return (
 		<section className="hero w-full md:h-screen flex">
-			<div className="self-end pl-20 pb-45 flex flex-col">
-				<h1 className="glow text-7xl font-bold text-white">
-					PEÇAS ÚNICAS
-				</h1>
-				<h2 className="delicate text-5xl font-bold text-white pb-4">
-					Para Momentos Únicos
-				</h2>
+			<div className="self-end md:pl-20 lg:pl-30 md:pb-45 lg:pb-70 flex flex-col">
+				<h1 className="glow text-7xl font-bold text-white">PEÇAS ÚNICAS</h1>
+				<h2 className="delicate text-5xl font-bold text-white pb-4">Para Momentos Únicos</h2>
 				<p className="text-xl pb-5 text-gray-100 text-shadow-[0_0_6px_#000000]">
-					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> <br /> e cada 
-					detalhe conta a <strong> sua história </strong>. Sinta o cuidado <br /> de uma peça 
-					feita <strong> exclusivamente </strong> para você.
+					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> <br /> e cada detalhe conta a <strong> sua história </strong>. Sinta o
+					cuidado <br /> de uma peça feita <strong> exclusivamente </strong> para você.
 				</p>
 				<button className="animated-button">
 					<svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">

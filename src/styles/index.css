@@ -6,6 +6,11 @@
 
 @import "./home.css";
 
+.body--no--scroll {
+	overflow: hidden;
+	height: 100vh;
+}
+
 @font-face {
   font-family: "Delicate Caligraphy";
   src: url("../assets/fonts/DelicateCaligraphyDemo.ttf") format("truetype");

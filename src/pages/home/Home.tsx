@@ -6,7 +6,7 @@ import PiecesSection from "./PiecesSection";
 
 function Home() {
 	return (
-		<main className="pt-2 flex gap-16 flex-col">
+		<main className="flex gap-16 flex-col">
 			<HeroSection />
 
 			<HandmadeSection />
