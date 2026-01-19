@@ -5,7 +5,7 @@ function HeroImg() {
 				<h1 className="glow text-7xl font-bold text-white text-shadow-[0_0_5px_#000000] md:text-shadow-none">PEÇAS ÚNICAS</h1>
 				<h2 className="delicate text-5xl font-bold text-white pb-4 text-shadow-[0_0_5px_#000000] md:text-shadow-none">Para Momentos Únicos</h2>
 				<p className="text-base w-2/3 lg:w-2/5 md:text-xl pb-5 text-black md:text-white text-shadow-[0_0_3px_#ffffff] md:text-shadow-[0_0_6px_#000000]">
-					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> e cada detalhe conta a <strong> sua história </strong>. Sinta o
+					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> e cada detalhe conta a <strong> sua história</strong>. Sinta o
 					cuidado de uma peça feita <strong> exclusivamente </strong> para você.
 				</p>
 				<button className="animated-button self-center md:self-auto">

@@ -7,7 +7,7 @@ function AboutSection() {
 				<div className="w-[50%]">
 					<h2 className="text-center text-3xl font-bold pb-8"> Quem Sou </h2>
 					<p>
-						Pellentesque morbi purus urna tempor vitae metus lacus porta mattis. Id risus tortor gravida convallis ut cursus nunc consequat mi. Mattis
+						Pellentesque morbi purus urna tempor vitae metus lacus porta mattis. Id risus tortor grada convallis ut cursus nunc consequat mi. Mattis
 						sed justo maecenas in proin sed adipiscing velit. Fringilla vestibulum quis amet ac adipiscing vitae diam mauris. Lorem ac mattis
 						tincidunt in sit tincidunt phasellus. Mauris ac nibh id sit tristique montes est. Quis pellentesque elementum eget lectus et vestibulum
 						pretium. In sit at imperdiet id ut sit pellentesque sed amet. Eu tortor bibendum egestas lacus non maecenas egestas. Convallis posuere
@@ -16,8 +16,8 @@ function AboutSection() {
 					</p>
 					<p>
 						Phasellus habitant dapibus in in. Mauris at in senectus eros. Elit porttitor sem fermentum turpis erat urna elit. Risus elit duis vitae
-						senectus lectus. Gravida sed felis nam proin. Lorem massa mus neque tellus non augue viverra. Pharetra in nisi nulla eget ultrices. In
-						interdum quam gravida quisque egestas in auctor id. Leo tortor vitae eget lectus eget. Praesent egestas malesuada ut nisi in. Dictum
+						senectus lectus. Graa sed felis nam proin. Lorem massa mus neque tellus non augue viverra. Pharetra in nisi nulla eget ultrices. In
+						interdum quam gvida quisque egestas in auctor id. Leo tortor vitae eget lectus eget. Praesent egestas malesuada ut nisi in. Dictum
 						pharetra nisl nisl elementum.
 					</p>
 				</div>

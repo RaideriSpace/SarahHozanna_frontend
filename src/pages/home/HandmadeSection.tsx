@@ -1,13 +1,16 @@
 function HandmadeSection() {
+	const imageSideClass =
+		"w-50 lg:w-full xl:w-50 aspect-[2/3] rounded-2xl opacity-15 lg:opacity-45 hover:opacity-100 hover:scale transition-all duration-300";
+
 	return (
-		<section className="w-full flex gap-4 md:px-20">
-			<div className=" w-[25%] flex flex-col items-center justify-evenly gap-16">
-				<div className="bg-img-1 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
-				<div className="bg-img-3 w-[85%] h-100 rounded-2xl -rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
-				<div className="bg-img-5 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
+		<section className="w-fit flex gap-4 lg:px-20 justify-center overflow-hidden">
+			<div className="absolute lg:items-end h-full flex flex-col gap-40 lg:gap-[20vh] xl:gap-20 pt-40 xl:pt-20 -left-15 lg:left-20 lg:w-1/6">
+				<div className={`bg-img-1 ${imageSideClass} rotate-6`}></div>
+				<div className={`bg-img-3 ${imageSideClass} -rotate-6`}></div>
+				<div className={`bg-img-5 ${imageSideClass} rotate-6`}></div>
 			</div>
 
-			<div className="w-[50%] py-20 px-5">
+			<div className="lg:w-3/6 px-4">
 				<div className="text-center">
 					<h2 className="text-4xl font-bold"> A Alma em Cada Ponto </h2>
 					<h3 className="pb-6 text-2xl font-medium"> A Magia das Peças Feitas à Mão </h3>
@@ -60,9 +63,10 @@ function HandmadeSection() {
 				</p>
 			</div>
 
-			<div className="w-[25%] flex flex-col items-center justify-evenly gap-8">
-				<div className="bg-img-2 w-[85%] h-100 rounded-2xl -rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
-				<div className="bg-img-4 w-[85%] h-100 rounded-2xl rotate-6 opacity-45 hover:opacity-100 hover:scale transition-all duration-300"></div>
+			<div className="absolute lg:items-star h-full flex flex-col gap-40 lg:gap-[20vh]  xl:gap-20 pt-100 xl:pt-20 -right-15 lg:right-20 lg:w-1/6">
+				<div className={`bg-img-2 ${imageSideClass} -rotate-6`}></div>
+				<div className={`bg-img-4 ${imageSideClass} rotate-6`}></div>
+				<div className={`bg-img-4 ${imageSideClass} -rotate-6`}></div>
 			</div>
 		</section>
 	);

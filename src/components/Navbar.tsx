@@ -32,8 +32,8 @@ function Navbar() {
 						:	<LuMenu size={30} />}
 					</button>
 				:	<nav className="md:cols-start-1 md:col-span-5 pt-8">
-						<ul className="flex gap-6">
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Quem Sou </li>
+						<ul className="flex gap-6 md:justify-self-center lg:justify-self-start">
+							<li className="menu__link text-gray-600 before:bg-pink-200"> Sobre Mim </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Peças </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Sob Medida </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Políticas </li>
@@ -46,7 +46,7 @@ function Navbar() {
 				{menuHamburguer && open && (
 					<nav className="bg-white w-1/2 md:w-1/4 absolute right-0 top-24 md:top-20 px-6 py-4 rounded-b-2xl justify-items-end">
 						<ul className="flex flex-col gap-4 text-right w-fit">
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Quem Sou </li>
+							<li className="menu__link text-gray-600 before:bg-pink-200"> Sobre Mim </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Peças </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Sob Medida </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Políticas </li>
