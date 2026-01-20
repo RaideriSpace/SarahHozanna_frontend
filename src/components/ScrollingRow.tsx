@@ -15,7 +15,7 @@ export const ScrollingRow = ({
 	<div className="w-full h-67 relative overflow-hidden bg-black group">
 		<h2 className="absolute top-2 left-1/2 -translate-x-1/2 text-2xl text-white font-bold text-shadow-md z-20 pointer-events-none">{title}</h2>
 
-		<Marquee speed={5} gradient={false} pauseOnHover={true} direction={direction}>
+		<Marquee speed={5} gradient={false} pauseOnClick={true} direction={direction}>
 			{clothes.map((cloth, index) => (
 				<img key={`${cloth.id}-${index}`} className={imgClass} src={cloth.src} alt={cloth.alt} />
 			))}
