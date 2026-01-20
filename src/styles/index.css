@@ -12,23 +12,49 @@
 }
 
 @font-face {
-  font-family: "Delicate Caligraphy";
-  src: url("../assets/fonts/DelicateCaligraphyDemo.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
+	font-family: "Delicate Caligraphy";
+	src: url("../assets/fonts/DelicateCaligraphyDemo.ttf") format("truetype");
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Glow Night";
-  src: url("../assets/fonts/GLOWNIGHT.ttf") format("truetype");
-  font-style: normal;
-  font-display: swap;
+	font-family: "Glow Night";
+	src: url("../assets/fonts/GLOWNIGHT.ttf") format("truetype");
+	font-style: normal;
+	font-display: swap;
 }
 
 .delicate {
-  font-family: "Delicate Caligraphy", sans-serif;
+	font-family: "Delicate Caligraphy", sans-serif;
 }
 
 .glow {
-  font-family: "Glow Night", sans-serif;
+	font-family: "Glow Night", sans-serif;
+}
+
+.animate-scroll {
+	animation: scroll 300s linear infinite;
+}
+
+.animate-scroll-reverse {
+	animation: scroll-reverse 300s linear infinite;
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+@keyframes scroll-reverse {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(100%);
+	}
 }
