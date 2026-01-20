@@ -1,16 +1,35 @@
+import { useLayoutEffect, useRef, useState } from "react";
+
 function HandmadeSection() {
+	const [textSize, setTextSize] = useState<number>(0);
+	const textRef = useRef<HTMLDivElement>(null);
+
+	useLayoutEffect(() => {
+		if (!textRef.current) return;
+
+		const resizeObserver = new ResizeObserver((entries) => {
+			for (let entry of entries) {
+				setTextSize(entry.contentRect.height);
+			}
+		});
+
+		resizeObserver.observe(textRef.current);
+
+		return () => resizeObserver.disconnect();
+	}, []);
+
 	const imageSideClass =
-		"w-50 lg:w-full xl:w-50 aspect-[2/3] rounded-2xl opacity-15 lg:opacity-45 hover:opacity-100 hover:scale transition-all duration-300";
+		"w-[20vh] aspect-[2/3] rounded-2xl opacity-15 hover:opacity-100 hover:scale transition-all duration-300 md:w-[25v] lg:w-3/7 lg:opacity-45 xl:w-55";
 
 	return (
-		<section className="w-fit flex gap-4 lg:px-20 justify-center overflow-hidden">
-			<div className="absolute lg:items-end h-full flex flex-col gap-40 lg:gap-[20vh] xl:gap-20 pt-40 xl:pt-20 -left-15 lg:left-20 lg:w-1/6">
-				<div className={`bg-img-1 ${imageSideClass} rotate-6`}></div>
-				<div className={`bg-img-3 ${imageSideClass} -rotate-6`}></div>
-				<div className={`bg-img-5 ${imageSideClass} rotate-6`}></div>
+		<section style={{ height: textSize > 0 ? `${textSize}px` : "auto" }} className={`w-full max-w-360 2xl:pb-20 flex justify-center lg:px-20`}>
+			<div className="w-full h-full self-start flex flex-col gap-80 pt-30 md:gap-30 md:pt-15 lg:gap-[20vh] lg:items-end xl:pt-20 xl:gap-20  ">
+				<div className={`bg-img-1 rotate-6 self-start ${imageSideClass}`}></div>
+				<div className={`bg-img-3 -rotate-6 self-start ${imageSideClass}`}></div>
+				<div className={`bg-img-5 rotate-6 self-start ${imageSideClass}`}></div>
 			</div>
 
-			<div className="lg:w-3/6 px-4">
+			<div ref={textRef} id="text" className="absolute lg:w-3/7 px-4 justify-center">
 				<div className="text-center">
 					<h2 className="text-4xl font-bold"> A Alma em Cada Ponto </h2>
 					<h3 className="pb-6 text-2xl font-medium"> A Magia das Peças Feitas à Mão </h3>
@@ -63,10 +82,10 @@ function HandmadeSection() {
 				</p>
 			</div>
 
-			<div className="absolute lg:items-star h-full flex flex-col gap-40 lg:gap-[20vh]  xl:gap-20 pt-100 xl:pt-20 -right-15 lg:right-20 lg:w-1/6">
-				<div className={`bg-img-2 ${imageSideClass} -rotate-6`}></div>
-				<div className={`bg-img-4 ${imageSideClass} rotate-6`}></div>
-				<div className={`bg-img-4 ${imageSideClass} -rotate-6`}></div>
+			<div className="w-full h-full lg:items-start flex flex-col gap-80 pt-100 md:gap-30 md:pt-40 lg:gap-[20vh] xl:pt-20 xl:gap-20">
+				<div className={`bg-img-2 -rotate-6 self-end ${imageSideClass}`}></div>
+				<div className={`bg-img-4 rotate-6 self-end ${imageSideClass}`}></div>
+				<div className={`bg-img-4 -rotate-6 self-end ${imageSideClass}`}></div>
 			</div>
 		</section>
 	);
