@@ -46,6 +46,7 @@ function Navbar() {
 				{menuHamburguer && open && (
 					<nav className="bg-white w-1/2 md:w-1/4 absolute right-0 top-24 md:top-20 px-6 py-4 rounded-b-2xl justify-items-end">
 						<ul className="flex flex-col gap-4 text-right w-fit">
+							<li className="menu__link text-gray-600 before:bg-pink-200"> Contato </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Sobre Mim </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Peças </li>
 							<li className="menu__link text-gray-600 before:bg-pink-200"> Sob Medida </li>

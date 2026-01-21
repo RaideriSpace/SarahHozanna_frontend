@@ -37,7 +37,7 @@ function HandmadeSection() {
 
 				<p>
 					Em um mundo dominado pela produção em massa e pelo imediatismo do fast fashion, existe um movimento silencioso, mas profundamente poderoso,
-					que resgata a essência do vestir: o <strong> feito à mão </strong>. Quando falamos de uma peça de vestuário artesanal, não estamos nos
+					que resgata a essência do vestir: o <strong> feito à mão</strong>. Quando falamos de uma peça de vestuário artesanal, não estamos nos
 					referindo apenas a fios, tecidos ou agulhas. Estamos falando de um processo íntimo, onde cada ponto carrega consigo uma carga imensa de{" "}
 					<strong>amor, carinho e cuidado</strong>.
 				</p>
