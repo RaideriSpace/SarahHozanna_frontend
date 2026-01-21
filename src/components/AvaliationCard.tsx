@@ -1,5 +1,3 @@
-import React from 'react'
-
 function AvaliationCard() {
   return (
 		<div className="flex flex-col justify-center gap-2 max-w-md w-full h-70 bg-pink-300 p-5 rounded-md mt-8 shadow-md hover:scale-105 hover:duration-150 duration-150">

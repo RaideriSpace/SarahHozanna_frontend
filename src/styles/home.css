@@ -7,32 +7,31 @@
 .bg-img-1 {
 	background-image: url(../assets/home_img/process_1.jpeg);
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 }
 
 .bg-img-2 {
 	background-image: url(../assets/home_img/process_2.jpg);
 	background-size: cover;
-  background-position: center;
-  
+	background-position: center;
 }
 
 .bg-img-3 {
 	background-image: url(../assets/home_img/process_3.jpg);
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 }
 
 .bg-img-4 {
 	background-image: url(../assets/home_img/process_4.jpg);
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 }
 
 .bg-img-5 {
 	background-image: url(../assets/home_img/process_5.jpg);
 	background-size: cover;
-  background-position: center;
+	background-position: center;
 }
 
 /*--- Custom Buttons ---*/
@@ -154,47 +153,50 @@
 /* Feedback Section button */
 
 .buttondepo {
-  cursor: pointer;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  padding: 0.7em 2em;
-  border: 3px solid #FF0072;
-  border-radius: 12px;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-  color: #FF0072;
-  text-decoration: none;
-  transition: 0.3s ease all;
-  z-index: 1;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	padding: 0.7em 2em;
+	border: 2px solid #ff0072;
+	border-radius: 12px;
+	position: relative;
+	box-shadow:
+		0 2px 10px rgba(0, 0, 0, 0.16),
+		0 3px 6px rgba(0, 0, 0, 0.1);
+	color: #ff0072;
+	transition: 0.3s ease all;
+	z-index: 1;
 }
 
 .buttondepo:before {
-  transition: 0.5s all ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 50%;
-  bottom: 0;
-  opacity: 0;
-  content: '';
-  background-color: #FF0072;
-  z-index: -1;
+	transition: 0.5s all ease;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	right: 50%;
+	bottom: 0;
+	opacity: 0;
+	border-radius: 8px;
+	content: "";
+	background-color: #ff0072;
+	z-index: -1;
 }
 
-.buttondepo:hover, .buttondepo:focus {
-  color: white;
+.buttondepo:hover,
+.buttondepo:focus {
+	color: white;
 }
 
-.buttondepo:hover:before, .buttondepo:focus:before {
-  transition: 0.5s all ease;
-  left: 0;
-  right: 0;
-  opacity: 1;
+.buttondepo:hover:before,
+.buttondepo:focus:before {
+	transition: 0.5s all ease;
+	left: 0;
+	right: 0;
+	opacity: 1;
 }
 
 .buttondepo:active {
-  transform: scale(0.9);
+	transform: scale(0.9);
 }
