@@ -1,10 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type FC } from "react";
 import logo from "../assets/logo.svg";
 import useMenuHamburguer from "../hooks/useMenuHamburguer";
 import { LuMenu } from "react-icons/lu";
 import { AiFillCloseCircle } from "react-icons/ai";
 
-function Navbar() {
+interface NavbarProps {
+  onContactClick: () => void;
+}
+
+
+
+export const Navbar: FC<NavbarProps> = ({ onContactClick}) => {
 	const [open, setOpen] = useState(false);
 	const menuHamburguer = useMenuHamburguer();
 
@@ -20,6 +26,15 @@ function Navbar() {
 			document.body.classList.remove("body--no--scroll");
 		};
 	}, [open, menuHamburguer]);
+
+  const handleNavigationClick = useCallback(
+    (action: () => void) => {
+      action();
+      if(menuHamburguer) {
+        closeMenu();
+      }
+    }, [menuHamburguer, closeMenu]
+  )
 
 	return (
 		<>
@@ -57,7 +72,7 @@ function Navbar() {
 
 				{!menuHamburguer && (
 					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4">
-						<button className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
+						<button onClick={() => handleNavigationClick(onContactClick)} className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
 							<span>Contato</span>
 						</button>
 					</div>

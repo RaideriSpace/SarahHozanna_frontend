@@ -5,7 +5,7 @@ import { PiWhatsappLogoDuotone } from "react-icons/pi";
 
 function Footer() {
 	return (
-		<footer>
+		<footer className="w-full">
 			<div className="h-70 w-full grid grid-cols-3">
 				<div className="col-span-3 md:col-span-1 md:col-start-2 self-center justify-self-center">
 					<img src={logo} alt="Logo escrito Sarah Hozanna estilizado com um manequim e uma agulha" className="w-80" />
