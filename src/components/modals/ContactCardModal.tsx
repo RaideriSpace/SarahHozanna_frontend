@@ -37,8 +37,10 @@ const ContactCardModal: FC<ContactCardModalProps> = ({ onClose }) => {
 					</div>
 				</div>
 
-				<div className="w-full sm:w-3/5 flex sm:flex-col items-end sm:justify-between">
-					<h2 className="self-center w-3/5 sm:w-auto delicate font-bold text-3xl sm:pt-8 sm:text-4xl text-center"> Vamos juntos realizar o seu sonho </h2>
+				<div className="w-full pr-4 pl-3 sm:pl-0 sm:pr-0 sm:w-3/5 flex sm:flex-col items-end sm:justify-between">
+					<h2 className="self-center w-3/5 sm:w-auto delicate font-bold text-3xl sm:pt-8 sm:text-4xl text-center">
+						Vamos juntos realizar o seu sonho
+					</h2>
 					<img src={qrCode} alt="QRCode para o Whatsapp" className="w-2/5 sm:w-auto" />
 				</div>
 			</motion.div>
