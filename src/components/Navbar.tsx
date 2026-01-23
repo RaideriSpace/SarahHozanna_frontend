@@ -3,14 +3,13 @@ import logo from "../assets/logo.svg";
 import useMenuHamburguer from "../hooks/useMenuHamburguer";
 import { LuMenu } from "react-icons/lu";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { AnimatePresence, motion } from "motion/react";
 
 interface NavbarProps {
-  onContactClick: () => void;
+	onContactClick: () => void;
 }
 
-
-
-export const Navbar: FC<NavbarProps> = ({ onContactClick}) => {
+export const Navbar: FC<NavbarProps> = ({ onContactClick }) => {
 	const [open, setOpen] = useState(false);
 	const menuHamburguer = useMenuHamburguer();
 
@@ -27,14 +26,15 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick}) => {
 		};
 	}, [open, menuHamburguer]);
 
-  const handleNavigationClick = useCallback(
-    (action: () => void) => {
-      action();
-      if(menuHamburguer) {
-        closeMenu();
-      }
-    }, [menuHamburguer, closeMenu]
-  )
+	const handleNavigationClick = useCallback(
+		(action: () => void) => {
+			action();
+			if (menuHamburguer && action !== onContactClick) {
+				closeMenu();
+			}
+		},
+		[menuHamburguer, closeMenu],
+	);
 
 	return (
 		<>
@@ -58,32 +58,58 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick}) => {
 
 				<img src={logo} alt="Logo" className="py-2 md:py-0 col-span-12 md:cols-start-6 md:col-span-2  justify-self-center w-37 2xl:w-44" />
 
-				{menuHamburguer && open && (
-					<nav className="bg-white w-1/2 md:w-1/4 absolute right-0 top-24 md:top-20 px-6 py-4 rounded-b-2xl justify-items-end">
-						<ul className="flex flex-col gap-4 text-right w-fit">
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Contato </li>
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Sobre Mim </li>
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Peças </li>
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Sob Medida </li>
-							<li className="menu__link text-gray-600 before:bg-pink-200"> Políticas </li>
-						</ul>
-					</nav>
-				)}
+				<AnimatePresence>
+					{menuHamburguer && open && (
+						<motion.nav
+							className="transition-all bg-white w-1/2 md:w-1/4 absolute right-0 top-24 md:top-20 px-6 py-4 rounded-b-2xl justify-items-end shadow-[-2px_3px_2px_#00000050]"
+							initial={{ height: "0px" }}
+							animate={{ height: "auto" }}
+							exit={{ height: "0px" }}
+							transition={{ duration: 0.24 }}>
+							<motion.div initial={{ opacity: 0, transition: { delay: 0.06, duration: 0.6 } }} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: {duration: 0.06} }}>
+								<div>
+									<button
+										onClick={() => handleNavigationClick(onContactClick)}
+										className="transition-all duration-500 contact-mobile w-full text-end bg-pink-200 text-gray-600 focus:bg-pink-800 focus:text-gray-200 px-6 py-2 rounded-xl">
+										<span>Contato</span>
+									</button>
+								</div>
+								<hr className="w-full py-1 text-pink-300" />
+								<ul className="flex flex-col gap-4 text-right w-fit">
+									<li className="menu__link text-gray-600 before:bg-pink-200"> Sobre Mim </li>
+									<li className="menu__link text-gray-600 before:bg-pink-200"> Peças </li>
+									<li className="menu__link text-gray-600 before:bg-pink-200"> Sob Medida </li>
+									<li className="menu__link text-gray-600 before:bg-pink-200"> Políticas </li>
+								</ul>
+							</motion.div>
+						</motion.nav>
+					)}
+				</AnimatePresence>
 
 				{!menuHamburguer && (
 					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4">
-						<button onClick={() => handleNavigationClick(onContactClick)} className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
+						<button
+							onClick={() => handleNavigationClick(onContactClick)}
+							className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
 							<span>Contato</span>
 						</button>
 					</div>
 				)}
 			</header>
 
-			{menuHamburguer && open && (
-				<button onClick={closeMenu} className="fixed top-0 left-0 h-screen w-screen bg-black/35 z-10 transition-opacity"></button>
-			)}
+			<AnimatePresence>
+				{menuHamburguer && open && (
+					<motion.button
+						onClick={closeMenu}
+						className="fixed top-0 left-0 h-screen w-screen bg-black z-10"
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 0.6 }}
+						exit={{ opacity: 0 }}
+						transition={{ duration: 0.24 }}></motion.button>
+				)}
+			</AnimatePresence>
 		</>
 	);
-}
+};
 
 export default Navbar;

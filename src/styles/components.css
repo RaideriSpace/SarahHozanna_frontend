@@ -70,3 +70,9 @@
 .contact:active {
   transform: scale(0.95);
 }
+
+/*--- Mobile Contact Button ---*/
+
+.contact-mobile {
+  margin-bottom: 16px;
+}

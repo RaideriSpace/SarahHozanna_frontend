@@ -21,24 +21,25 @@ const ContactCardModal: FC<ContactCardModalProps> = ({ onClose }) => {
 			exit={{ opacity: 0 }}
 			onClick={onClose}>
 			<motion.div
-				className="w-178 h-99 bg-white rounded-2xl flex z-50"
+				className="w-9/10 sm:w-178 h-fit sm:h-99 py-5 sm:px-5 bg-white rounded-2xl flex flex-col sm:flex-row z-50"
 				initial={{ opacity: 0, y: "-100vh" }}
 				animate={{ opacity: 1, y: "0" }}
 				transition={{ duration: 0.4, y: { type: "spring", visualDuration: 0.3, bounce: 0.4 } }}
 				exit={{ opacity: 0, y: "-100vh" }}
 				onClick={(e) => e.stopPropagation()}>
-				<div className="w-3/5">
-					<img src={logo} alt="Logo Sarah Hozanna" className="w-70 pt-5 pl-5" />
-					<div className="pl-16 pt-5 flex flex-col">
+				<div className="w-full flex flex-col gap-3 items-center sm:items-start sm:w-3/5 sm:gap-5">
+					<img src={logo} alt="Logo Sarah Hozanna" className="w-70" />
+					<div className="sm:pl-16 flex flex-col items-center sm:items-start">
 						<ModalLinks text="/sarahhozanna" href="https://www.instagram.com/sarahhozanna" Icon={ImInstagram} />
 						<ModalLinks text="(11) 9 7331-4888" href="https://wa.me/5511973314888" Icon={PiWhatsappLogoDuotone} />
 						<ModalLinks text="/sarahsillysad" href="https://www.facebook.com/sarahsillysad" Icon={ImFacebook2} />
 						<ModalLinks text="sarahozanna@gmail.com" href="mailto:sarahozanna@gmail.com" Icon={BsMailbox2Flag} />
 					</div>
 				</div>
-				<div className="w-3/5 flex flex-col items-end">
-					<h2 className="pt-14 pr-14 delicate font-bold text-4xl text-center"> Vamos juntos realizar o seu sonho </h2>
-					<img src={qrCode} alt="QRCode para o Whatsapp" className="pt-7 pr-5" />
+
+				<div className="w-full sm:w-3/5 flex sm:flex-col items-end sm:justify-between">
+					<h2 className="self-center w-3/5 sm:w-auto delicate font-bold text-3xl sm:pt-8 sm:text-4xl text-center"> Vamos juntos realizar o seu sonho </h2>
+					<img src={qrCode} alt="QRCode para o Whatsapp" className="w-2/5 sm:w-auto" />
 				</div>
 			</motion.div>
 		</motion.div>
