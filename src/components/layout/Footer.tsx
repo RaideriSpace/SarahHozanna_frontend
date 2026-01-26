@@ -1,7 +1,7 @@
-import logo from "../assets/logo.svg";
-
 import { ImInstagram, ImFacebook2 } from "react-icons/im";
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
+
+import logo from "../../assets/logo.svg";
 
 function Footer() {
 	return (

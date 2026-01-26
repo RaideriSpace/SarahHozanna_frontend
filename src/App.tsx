@@ -1,6 +1,6 @@
-import Footer from "./components/Footer";
+import Footer from "./components/layout/Footer";
 import ContactCardModal from "./components/modals/ContactCardModal";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/layout/Navbar";
 import { Home } from "./pages/home/Home";
 import { useModal } from "./hooks/useModal";
 import { AnimatePresence } from "motion/react";
@@ -8,7 +8,7 @@ import WorkInProgressModal from "./components/modals/WorkInProgressModal";
 
 function App() {
 	const { isOpen: isContactModalOpen, openModal: handleOpenContactModal, closeModal: handleCloseContactModal } = useModal();
-  const {isOpen: isWipModalOpen, openModal: handleOpenWipModal, closeModal: handleCloseWipModal } = useModal();
+	const { isOpen: isWipModalOpen, openModal: handleOpenWipModal, closeModal: handleCloseWipModal } = useModal();
 
 	return (
 		<div className="flex flex-col items-center overflow-hidden">

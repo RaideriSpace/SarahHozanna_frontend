@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState, type FC } from "react";
-import logo from "../assets/logo.svg";
-import useMenuHamburguer from "../hooks/useMenuHamburguer";
 import { LuMenu } from "react-icons/lu";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { AnimatePresence, motion } from "motion/react";
+
+import logo from "../../assets/logo.svg";
+import useMenuHamburguer from "../../hooks/useMenuHamburguer";
 
 interface NavbarProps {
 	onContactClick: () => void;
