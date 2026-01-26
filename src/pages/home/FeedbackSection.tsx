@@ -1,6 +1,11 @@
+import type { FC } from "react";
 import AvaliationCard from "../../components/AvaliationCard";
 
-function FeedbackSection() {
+interface FeedbackProps {
+	onWipClick: () => void;
+}
+
+export const FeedbackSection: FC<FeedbackProps> = ({ onWipClick }) => {
 	return (
 		<section className="w-full px-4 pt-4 pb-6 md:px-20 flex flex-col justify-center  gap-8">
 			<h2 className="text-center text-3xl font-bold"> Depoimentos </h2>
@@ -10,11 +15,13 @@ function FeedbackSection() {
 			</div>
 
 			<div className="self-center flex flex-col md:flex-row gap-4">
-				<button className="buttondepo">Peças Prontas</button>
-				<button className="buttondepo">Sob Medida</button>
+				<button onClick={onWipClick} className="buttondepo">
+					Peças Prontas
+				</button>
+				<button onClick={onWipClick} className="buttondepo">
+					Sob Medida
+				</button>
 			</div>
 		</section>
 	);
-}
-
-export default FeedbackSection;
+};

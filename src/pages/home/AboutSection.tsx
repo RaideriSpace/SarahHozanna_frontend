@@ -1,6 +1,11 @@
+import type { FC } from "react";
 import sarah_photo from "../../assets/home_img/process_4.jpg";
 
-function AboutSection() {
+interface AboutProps {
+	onWipClick: () => void;
+}
+
+export const AboutSection: FC<AboutProps> = ({ onWipClick }) => {
 	return (
 		<section className="flex flex-col pb-8 items-center bg-pink-100 md:py-8 md:rounded-tr-none">
 			<div className="flex flex-col md:flex-row justify-center items-center gap-8">
@@ -20,7 +25,7 @@ function AboutSection() {
 						interdum quam gvida quisque egestas in auctor id. Leo tortor vitae eget lectus eget. Praesent egestas malesuada ut nisi in. Dictum
 						pharetra nisl nisl elementum.
 					</p>
-          <button className="bg-white px-8 py-2 w-fit self-center rounded-2xl"> Minha História </button>
+					<button onClick={onWipClick} className="bg-white px-8 py-2 w-fit self-center rounded-2xl cursor-pointer"> Minha História </button>
 				</div>
 				<div className="w-full bg-white rounded-bl-[50%] md:w-[30%] md:bg-transparent">
 					<img
@@ -32,6 +37,4 @@ function AboutSection() {
 			</div>
 		</section>
 	);
-}
-
-export default AboutSection;
+};

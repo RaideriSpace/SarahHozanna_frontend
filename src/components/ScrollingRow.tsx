@@ -1,7 +1,7 @@
 import Marquee from "react-fast-marquee";
 import type { Cloths } from "../data/clothsData";
 
-const imgClass = "h-67 w-45 md:w-64 object-cover object-center opacity-50 transition-all hover:opacity-100 duration-300 flex-shrink-0";
+const imgClass = "h-67 w-45 md:w-64 object-cover object-center opacity-50 transition-all hover:opacity-100 duration-300 flex-shrink-0 cursor-pointer";
 
 export const ScrollingRow = ({
 	clothes,

@@ -1,4 +1,10 @@
-function HeroImg() {
+import type { FC } from "react";
+
+interface HeroProps {
+	onWipClick: () => void;
+}
+
+export const HeroSection:FC<HeroProps> = ( { onWipClick } ) => {
 	return (
 		<section className="hero w-full h-screen max-h-263 md:h-screen flex">
 			<div className="self-end pl-4 pb-20 md:pl-10 lg:pl-20 md:pb-70 lg:pb-[16%] flex flex-col gap-2">
@@ -8,7 +14,7 @@ function HeroImg() {
 					Roupas criadas à mão, onde cada ponto carrega <strong> amor </strong> e cada detalhe conta a <strong> sua história</strong>. Sinta o cuidado
 					de uma peça feita <strong> exclusivamente </strong> para você.
 				</p>
-				<button className="animated-button self-center md:self-auto">
+				<button onClick={onWipClick} className="animated-button self-center md:self-auto">
 					<svg viewBox="0 0 24 24" className="arr-2" xmlns="http://www.w3.org/2000/svg">
 						<path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
 					</svg>
@@ -21,6 +27,4 @@ function HeroImg() {
 			</div>
 		</section>
 	);
-}
-
-export default HeroImg;
+};

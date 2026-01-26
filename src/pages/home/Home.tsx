@@ -1,23 +1,26 @@
-import AboutSection from "./AboutSection";
-import FeedbackSection from "./FeedbackSection";
-import HandmadeSection from "./HandmadeSection";
-import HeroSection from "./HeroSection";
-import PiecesSection from "./PiecesSection";
+import type { FC } from "react";
+import { HeroSection } from "./HeroSection";
+import { HandmadeSection } from "./HandmadeSection";
+import { PiecesSection } from "./PiecesSection";
+import { FeedbackSection } from "./FeedbackSection";
+import { AboutSection } from "./AboutSection";
 
-function Home() {
+interface HomeProps {
+	onWipClick: () => void;
+}
+
+export const Home: FC<HomeProps> = ({ onWipClick }) => {
 	return (
 		<main className="flex gap-16 flex-col items-center overflow-hidden max-w-475">
-			<HeroSection />
+			<HeroSection onWipClick={onWipClick} />
 
 			<HandmadeSection />
 
-			<PiecesSection />
+			<PiecesSection onWipClick={onWipClick} />
 
-			<FeedbackSection />
+			<FeedbackSection onWipClick={onWipClick} />
 
-			<AboutSection />
+			<AboutSection onWipClick={onWipClick} />
 		</main>
 	);
-}
-
-export default Home;
+};

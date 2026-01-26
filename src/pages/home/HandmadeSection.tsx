@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
-function HandmadeSection() {
+export const HandmadeSection = () => {
 	const [textSize, setTextSize] = useState<number>(0);
 	const textRef = useRef<HTMLDivElement>(null);
 
@@ -90,5 +90,3 @@ function HandmadeSection() {
 		</section>
 	);
 }
-
-export default HandmadeSection;

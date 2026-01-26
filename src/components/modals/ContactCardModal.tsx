@@ -2,12 +2,11 @@ import { ImFacebook2, ImInstagram } from "react-icons/im";
 import { BsMailbox2Flag } from "react-icons/bs";
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
 import { motion } from "motion/react";
-
-import logo from "../../assets/logo.svg";
-import qrCode from "../../assets/qrCode_whatsapp.svg";
 import type { FC } from "react";
 import { ModalLinks } from "./ModalLinks";
 
+import logo from "../../assets/logo.svg";
+import qrCode from "../../assets/qrCode_whatsapp.svg";
 interface ContactCardModalProps {
 	onClose: () => void;
 }
@@ -21,7 +20,7 @@ const ContactCardModal: FC<ContactCardModalProps> = ({ onClose }) => {
 			exit={{ opacity: 0 }}
 			onClick={onClose}>
 			<motion.div
-				className="w-9/10 sm:w-178 h-fit sm:h-99 py-5 sm:px-5 bg-white rounded-2xl flex flex-col sm:flex-row z-50"
+				className="w-9/10 sm:w-178 h-fit sm:h-99 py-5 sm:px-5 bg-white rounded-2xl flex flex-col sm:flex-row z-50 drop-shadow-[0_0_15px_rgba(0,0,0,0.9)]"
 				initial={{ opacity: 0, y: "-100vh" }}
 				animate={{ opacity: 1, y: "0" }}
 				transition={{ duration: 0.4, y: { type: "spring", visualDuration: 0.3, bounce: 0.4 } }}
