@@ -1,7 +1,8 @@
 .hero {
 	background-image: url(../assets/home_img/hero.svg);
 	background-size: cover;
-	background-position: center;
+	background-position: center -20px;
+  background-repeat: no-repeat;
 }
 
 .bg-img-1 {
