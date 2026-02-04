@@ -85,7 +85,7 @@ export const HandmadeSection = () => {
 			<div className="w-full h-full lg:items-start flex flex-col gap-80 pt-100 md:gap-30 md:pt-40 lg:gap-[20vh] xl:pt-20 xl:gap-20">
 				<div className={`bg-img-2 -rotate-6 self-end ${imageSideClass}`}></div>
 				<div className={`bg-img-4 rotate-6 self-end ${imageSideClass}`}></div>
-				<div className={`bg-img-4 -rotate-6 self-end ${imageSideClass}`}></div>
+				<div className={`bg-img-6 -rotate-6 self-end ${imageSideClass}`}></div>
 			</div>
 		</section>
 	);

@@ -24,13 +24,19 @@
 }
 
 .bg-img-4 {
-	background-image: url(../assets/home_img/process_4.jpg);
+	background-image: url(../assets/home_img/process_5.jpg);
 	background-size: cover;
 	background-position: center;
 }
 
 .bg-img-5 {
-	background-image: url(../assets/home_img/process_5.jpg);
+	background-image: url(../assets/home_img/process_6.jpg);
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-img-6 {
+	background-image: url(../assets/home_img/process_7.jpg);
 	background-size: cover;
 	background-position: center;
 }
