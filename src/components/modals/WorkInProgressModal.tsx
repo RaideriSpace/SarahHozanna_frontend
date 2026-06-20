@@ -11,7 +11,7 @@ interface WorkInProgressProps {
 const WorkInProgressModal: FC<WorkInProgressProps> = ({ onClose }) => {
   return (
 		<motion.div
-			className="fixed top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center z-40"
+			className="fixed top-0 left-0 w-full h-full bg-dark-900/70 flex justify-center items-center z-40"
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
@@ -29,7 +29,7 @@ const WorkInProgressModal: FC<WorkInProgressProps> = ({ onClose }) => {
 						<p className="self-center"> Estamos modelando esta página... </p>
 						<h2 className="delicate font-bold text-4xl"> Em breve, mais novidades aqui para você!</h2>
 						<div className="self-center flex flex-col items-center">
-							<p className="text-pink-500 font-bold">Por enquanto, fale comigo</p>
+							<p className="text-secondary-400 font-bold">Por enquanto, fale comigo</p>
 							<div>
 								<ModalLinks text="(11) 9 7331-4888" href="https://wa.me/5511973314888" Icon={PiWhatsappLogoDuotone} />
 							</div>
