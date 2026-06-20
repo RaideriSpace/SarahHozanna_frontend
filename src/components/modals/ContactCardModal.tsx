@@ -29,7 +29,7 @@ const ContactCardModal: FC<ContactCardModalProps> = ({ onClose }) => {
 				<div className="w-full flex flex-col gap-3 items-center sm:items-start sm:w-3/5 sm:gap-5">
 					<img src={logo} alt="Logo Sarah Hozanna" className="w-70" />
 					<div className="sm:pl-16 flex flex-col items-center sm:items-start">
-						<ModalLinks text="/sarahhozanna" href="https://www.instagram.com/sarahhozanna" Icon={ImInstagram} />
+						<ModalLinks text="/sarahozanna" href="https://www.instagram.com/sarahozanna" Icon={ImInstagram} />
 						<ModalLinks text="(11) 9 7331-4888" href="https://wa.me/5511973314888" Icon={PiWhatsappLogoDuotone} />
 						<ModalLinks text="/sarahsillysad" href="https://www.facebook.com/sarahsillysad" Icon={ImFacebook2} />
 						<ModalLinks text="sarahozanna@gmail.com" href="mailto:sarahozanna@gmail.com" Icon={BsMailbox2Flag} />

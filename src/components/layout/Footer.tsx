@@ -10,7 +10,7 @@ function Footer() {
 				<div className="col-span-3 md:col-span-1 md:col-start-2 self-center justify-self-center">
 					<img src={logo} alt="Logo escrito Sarah Hozanna estilizado com um manequim e uma agulha" className="w-80" />
 					<div className="flex justify-center gap-4 pt-2">
-						<a href="https://www.instagram.com/sarahhozanna" rel="noopener noreferrer" target="_blank">
+						<a href="https://www.instagram.com/sarahozanna" rel="noopener noreferrer" target="_blank">
 							<ImInstagram size={30} className="transition-all hover:text-primary-400" />
 						</a>
 						<a href="https://wa.me/5511973314888" rel="noopener noreferrer" target="_blank">
