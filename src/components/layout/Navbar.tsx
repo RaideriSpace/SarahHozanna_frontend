@@ -41,39 +41,35 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 	return (
 		<>
 			<header
-				className={`w-full max-w-387.5 justify-self-center md:px-10 lg:px-20 md:py-1 2xl:py-3 grid md:grid-cols-12 items-center fixed bg-white z-40 shadow-[0_2px_5px_#00000050] transition-all ${open ? "rounded-bl-2xl" : "rounded-b-2xl"}`}>
+				className={`w-full max-w-387.5 justify-self-center md:px-10 lg:px-20 md:py-1 2xl:py-3 grid md:grid-cols-12 items-center fixed bg-white z-40 shadow-[0_2px_5px_var(--color-shadow-soft)] transition-all ${open ? "rounded-bl-2xl" : "rounded-b-2xl"}`}>
 				{menuHamburguer ?
 					<button onClick={toggleMenu} aria-label={open ? "Fechar Menu" : "Abrir Menu"} className={`absolute ${open ? "right-5.5" : "right-6"}`}>
 						{open ?
-							<AiFillCloseCircle size={35} className="text-pink-300" />
+							<AiFillCloseCircle size={35} className="text-primary-300" />
 						:	<LuMenu size={30} />}
 					</button>
 				:	<nav className="md:cols-start-1 md:col-span-5 pt-8">
 						<ul className="flex gap-6 md:justify-self-center lg:justify-self-start">
-							<li className="menu__link text-gray-600 before:bg-pink-200">
+							<li className="menu__link text-gray-600 before:bg-primary-400">
 								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
-									{" "}
-									Sobre Mim{" "}
+									Sobre Mim
 								</button>
 							</li>
 
-							<li className="menu__link text-gray-600 before:bg-pink-200 cursor-pointer">
-								{" "}
+							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
 								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
 									Peças
-								</button>{" "}
+								</button>
 							</li>
-							<li className="menu__link text-gray-600 before:bg-pink-200 cursor-pointer">
+							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
 								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
-									{" "}
 									Sob Medida
-								</button>{" "}
+								</button>
 							</li>
-							<li className="menu__link text-gray-600 before:bg-pink-200 cursor-pointer">
-								{" "}
+							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
 								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
 									Políticas
-								</button>{" "}
+								</button>
 							</li>
 						</ul>
 					</nav>
@@ -96,22 +92,22 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 								<div>
 									<button
 										onClick={() => handleNavigationClick(onContactClick)}
-										className="transition-all duration-500 contact-mobile w-full text-end bg-pink-200 text-gray-600 focus:bg-pink-800 focus:text-gray-200 px-6 py-2 rounded-xl">
+										className="transition-all duration-500 contact-mobile w-full text-end bg-primary-200 text-gray-600 focus:bg-primary-800 focus:text-gray-200 px-6 py-2 rounded-xl">
 										<span>Contato</span>
 									</button>
 								</div>
-								<hr className="w-full py-1 text-pink-300" />
+								<hr className="w-full py-1 text-primary-300" />
 								<ul className="flex flex-col gap-4 text-right w-fit">
-									<li className="menu__link text-gray-600 before:bg-pink-200">
+									<li className="menu__link text-gray-600 before:bg-primary-200">
 										<button onClick={() => handleNavigationClick(onWipClick)}>Sobre Mim</button>
 									</li>
-									<li className="menu__link text-gray-600 before:bg-pink-200">
+									<li className="menu__link text-gray-600 before:bg-primary-200">
 										<button onClick={() => handleNavigationClick(onWipClick)}> Peças</button>{" "}
 									</li>
-									<li className="menu__link text-gray-600 before:bg-pink-200">
+									<li className="menu__link text-gray-600 before:bg-primary-200">
 										<button onClick={() => handleNavigationClick(onWipClick)}> Sob Medida </button>
 									</li>
-									<li className="menu__link text-gray-600 before:bg-pink-200">
+									<li className="menu__link text-gray-600 before:bg-primary-200">
 										{" "}
 										<button onClick={() => handleNavigationClick(onWipClick)}>Políticas</button>{" "}
 									</li>
@@ -125,7 +121,7 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4">
 						<button
 							onClick={() => handleNavigationClick(onContactClick)}
-							className="contact text-gray-600 hover:text-white before:bg-pink-200 hover:before:bg-pink-400 active:text-gray-200 active:before:bg-pink-800">
+							className="contact text-gray-600 hover:text-white before:bg-primary-200 hover:before:bg-primary-400 active:text-gray-200 active:before:bg-primary-800">
 							<span>Contato</span>
 						</button>
 					</div>

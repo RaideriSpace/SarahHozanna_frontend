@@ -2,7 +2,7 @@
 	background-image: url(../assets/home_img/hero.svg);
 	background-size: cover;
 	background-position: center -20px;
-  background-repeat: no-repeat;
+	background-repeat: no-repeat;
 }
 
 .bg-img-1 {
@@ -59,8 +59,8 @@
 	background-color: inherit;
 	border-radius: 12px;
 	font-weight: 800;
-	color: white;
-	box-shadow: 0 0 0 2px #fdc700;
+	color: var(--color-light-300);
+	box-shadow: 0 0 0 2px var(--color-cta-default);
 	cursor: pointer;
 	overflow: hidden;
 	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -69,7 +69,7 @@
 .animated-button svg {
 	position: absolute;
 	width: 24px;
-	fill: white;
+	fill: var(--color-light-300);
 	z-index: 9;
 	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -89,7 +89,7 @@
 	transform: translate(-50%, -50%);
 	width: 20px;
 	height: 20px;
-	background-color: oklch(47.3% 0.137 46.201);
+	background-color: var(--color-secondary-700);
 	border-radius: 12px;
 	opacity: 0;
 	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -104,7 +104,7 @@
 
 .animated-button:hover {
 	box-shadow: 0 0 0 12px transparent;
-	color: white;
+	color: var(--color-light-100);
 	border-radius: 12px;
 }
 
@@ -121,12 +121,12 @@
 }
 
 .animated-button:hover svg {
-	fill: white;
+	fill: var(--color-light-100);
 }
 
 .animated-button:active {
 	scale: 0.95;
-	box-shadow: 0 0 0 4px oklch(85.2% 0.199 91.936);
+	box-shadow: 0 0 0 4px var(--color-cta-default);
 }
 
 .animated-button:hover .circle {
@@ -137,23 +137,23 @@
 
 @media (max-width: 1023px) {
 	.animated-button {
-		color: black;
+		color: var(--color-light-900);
 		margin-top: 8px;
 	}
 
 	.animated-button svg {
-		fill: black;
+		fill: var(--color-light-900);
 	}
 }
 
 @media (max-width: 768px) {
 	.animated-button {
-		color: black;
+		color: var(--color-light-900);
 		margin-top: 8px;
 	}
 
 	.animated-button svg {
-		fill: black;
+		fill: var(--color-light-900);
 	}
 }
 
@@ -166,13 +166,13 @@
 	text-align: center;
 	font-weight: bold;
 	padding: 0.7em 2em;
-	border: 2px solid #ff0072;
+	border: 2px solid var(--color-cta-active);
 	border-radius: 12px;
 	position: relative;
 	box-shadow:
-		0 2px 10px rgba(0, 0, 0, 0.16),
-		0 3px 6px rgba(0, 0, 0, 0.1);
-	color: #ff0072;
+		0 2px 10px color-mix(in srgb, var(--color-dark-600) 30%, transparent),
+    0 3px 6px color-mix(in srgb, var(--color-dark-400) 10%, transparent);
+	color: var(--color-cta-active);
 	transition: 0.3s ease all;
 	z-index: 1;
 }
@@ -187,13 +187,13 @@
 	opacity: 0;
 	border-radius: 8px;
 	content: "";
-	background-color: #ff0072;
+	background-color: var(--color-cta-hover);
 	z-index: -1;
 }
 
 .buttondepo:hover,
 .buttondepo:focus {
-	color: white;
+	color: var(--color-light-200);
 }
 
 .buttondepo:hover:before,
@@ -224,8 +224,8 @@
 	background-color: inherit;
 	border-radius: 12px;
 	font-weight: 800;
-	color: black;
-	box-shadow: 0 0 0 2px #fda5d5;
+	color: var(--color-secondary-500);
+	box-shadow: 0 0 0 2px var(--color-secondary-300);
 	cursor: pointer;
 	overflow: hidden;
 	transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -234,7 +234,7 @@
 .animated-button_about svg {
 	position: absolute;
 	width: 24px;
-	fill: black;
+	fill: var(--color-secondary-500);
 	z-index: 9;
 	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -254,7 +254,7 @@
 	transform: translate(-50%, -50%);
 	width: 20px;
 	height: 20px;
-	background-color: oklch(45.9% 0.187 3.815);
+	background-color: var(--color-primary-800);
 	border-radius: 12px;
 	opacity: 0;
 	transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
@@ -269,7 +269,7 @@
 
 .animated-button_about:hover {
 	box-shadow: 0 0 0 12px transparent;
-	color: white;
+	color: var(--color-light-200);
 	border-radius: 12px;
 }
 
@@ -286,12 +286,12 @@
 }
 
 .animated-button_about:hover svg {
-	fill: white;
+	fill: var(--color-light-200);
 }
 
 .animated-button_about:active {
 	scale: 0.95;
-	box-shadow: 0 0 0 4px oklch(85.2% 0.199 91.936);
+	box-shadow: 0 0 0 4px var(--color-secondary-300);
 }
 
 .animated-button_about:hover .circle_about {

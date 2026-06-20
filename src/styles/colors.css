@@ -1,0 +1,84 @@
+/* ---------------------------------------------------------
+ * Paleta de Cores — By Sarah Hozanna
+ * Identidade visual: delicada, retrô e atemporal
+ *
+ * Estes tokens usam o namespace --color-* do Tailwind v4,
+ * então cada variável já vira uma utility class automaticamente
+ * (ex: --color-primary-300 gera bg-primary-300, text-primary-300,
+ * border-primary-300, etc.)
+ * --------------------------------------------------------- */
+
+@theme {
+  --color-primary-50: #f6f7f5;
+  --color-primary-100: #eaece7;
+  --color-primary-200: #d0d6cb;
+  --color-primary-300: #aab3a2;
+  --color-primary-400: #88937b; 
+  --color-primary-500: #6b765e;
+  --color-primary-600: #535b48;
+  --color-primary-700: #42493a;
+  --color-primary-800: #353a2e;
+  --color-primary-900: #2c3127;
+
+  --color-secondary-50: #fbf5f2;
+  --color-secondary-100: #f5e7df;
+  --color-secondary-200: #ebcfbe;
+  --color-secondary-300: #dfb29a;
+  --color-secondary-400: #d09072;
+  --color-secondary-500: #a46447;
+  --color-secondary-600: #935338;
+  --color-secondary-700: #7b432e;
+  --color-secondary-800: #653828;
+  --color-secondary-900: #543024;
+
+  --color-tertiary-50: #fbfaf8;
+  --color-tertiary-100: #f4eee7;
+  --color-tertiary-200: #e7dac9;
+  --color-tertiary-300: #ceb59e;
+  --color-tertiary-400: #b89b80;
+  --color-tertiary-500: #a28365;
+  --color-tertiary-600: #8c6d51;
+  --color-tertiary-700: #755740;
+  --color-tertiary-800: #604634;
+  --color-tertiary-900: #4d382b;
+
+  --color-light-50: #fefefe;
+  --color-light-100: #fcfbf9;
+  --color-light-200: #f8f6f3;
+  --color-light-300: #f3f0ea;
+  --color-light-400: #eee9df;
+  --color-light-500: #e8e1d5;
+  --color-light-600: #c8c1b5;
+  --color-light-700: #a59e92;
+  --color-light-800: #7d776c;
+  --color-light-900: #58534a;
+
+  --color-dark-50: #c9a393;
+  --color-dark-100: #aa8170;
+  --color-dark-200: #876253;
+  --color-dark-300: #684a3e;
+  --color-dark-400: #4c362d;
+  --color-dark-500: #3b2a23;
+  --color-dark-600: #2b1e19;
+  --color-dark-700: #1c1411;
+  --color-dark-800: #100b09;
+  --color-dark-900: #060403;
+  
+	/* Destaque (Dourado) — toque retrô usado nos CTAs principais
+	   (Hero e botão "Minha História") */
+	--color-accent-300: oklch(85.2% 0.199 91.936);
+	--color-accent-400: #fdc700;
+	--color-accent-800: oklch(47.3% 0.137 46.201);
+
+	/* CTA vívido — botões de depoimentos (Peças Prontas / Sob Medida) */
+	--color-cta-default: #d08c3f; /* Cor do botão normal */
+  --color-cta-hover: #b57731;   /* Cor ao passar o mouse */
+  --color-cta-active: #9a6325;  /* Cor ao clicar */
+  --color-cta-disabled: #e2cba9;
+
+	/* Avaliações — estrelas dos cards de depoimento */
+	--color-rating: #ffc400;
+
+	/* Sombra padrão — usada na Navbar */
+	--color-shadow-soft: #00000050;
+}

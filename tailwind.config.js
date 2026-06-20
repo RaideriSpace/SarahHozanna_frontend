@@ -2,12 +2,18 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
-				scroll: "scroll 30s linear infinite",
+				"scroll-slow": "scroll 60s linear infinite",
+				"scroll-normal": "scroll 40s linear infinite",
+				"scroll-fast": "scroll 20s linear infinite",
 			},
 			keyframes: {
 				scroll: {
-					"0%": { transform: "translateX(0)" },
-					"100%": { transform: "translateX(-100)" },
+					from: {
+						transform: "translateX(0)",
+					},
+					to: {
+						transform: "translateX(-100%)",
+					},
 				},
 			},
 		},

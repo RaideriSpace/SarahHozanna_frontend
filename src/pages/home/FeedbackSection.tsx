@@ -1,5 +1,5 @@
 import type { FC } from "react";
-import AvaliationCard from "../../components/AvaliationCard";
+import AvaliationCarousel from "../../components/AvaliationCarousel";
 import { AllAvaliations } from "../../data/avaliationsData";
 
 interface FeedbackProps {
@@ -12,7 +12,7 @@ export const FeedbackSection: FC<FeedbackProps> = ({ onWipClick }) => {
 			<h2 className="text-center text-3xl font-bold"> Depoimentos </h2>
 
 			<div className="w-full flex justify-center">
-				<AvaliationCard avaliations={AllAvaliations}/>
+				<AvaliationCarousel avaliations={AllAvaliations} />
 			</div>
 
 			<div className="self-center flex flex-col md:flex-row gap-4">

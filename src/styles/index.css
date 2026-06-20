@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@import "./colors.css";
+
 @import "./components.css";
 
 @import "./home.css";

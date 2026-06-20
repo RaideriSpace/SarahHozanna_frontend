@@ -6,16 +6,24 @@ interface PiecesProps {
 	onWipClick: () => void;
 }
 
-export const PiecesSection: FC<PiecesProps> = ( {onWipClick} ) => {
-
+export const PiecesSection: FC<PiecesProps> = ({ onWipClick }) => {
 	return (
-		<section className="w-full flex flex-col">
-			<button onClick={onWipClick}>
-				<ScrollingRow clothes={readyClothes} title="Peças Prontas" direction="right" />
-			</button>
-			<button onClick={onWipClick}>
-				<ScrollingRow clothes={tailoredClothes} title="Sob Medida" direction="left" />
-			</button>
+		<section className="flex w-full flex-col">
+			<div onClick={onWipClick} className="cursor-pointer">
+				<ScrollingRow
+					clothes={readyClothes}
+					title="Peças Prontas"
+					direction="left"
+				/>
+			</div>
+
+			<div onClick={onWipClick} className="cursor-pointer">
+				<ScrollingRow
+					clothes={tailoredClothes}
+					title="Sob Medida"
+					direction="right"
+				/>
+			</div>
 		</section>
 	);
-}
+};
