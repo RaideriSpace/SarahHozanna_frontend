@@ -1,27 +1,37 @@
 import Footer from "./components/layout/Footer";
 import ContactCardModal from "./components/modals/ContactCardModal";
-import Navbar from "./components/layout/Navbar";
-import { Home } from "./pages/home/Home";
+import { Home } from "./pages/home";
 import { useModal } from "./hooks/useModal";
 import { AnimatePresence } from "motion/react";
 import WorkInProgressModal from "./components/modals/WorkInProgressModal";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PiecesPage from "./pages/pieces";
+import { Navbar } from "./components/layout/Navbar";
+
 function App() {
 	const { isOpen: isContactModalOpen, openModal: handleOpenContactModal, closeModal: handleCloseContactModal } = useModal();
+
 	const { isOpen: isWipModalOpen, openModal: handleOpenWipModal, closeModal: handleCloseWipModal } = useModal();
 
 	return (
-		<div className="flex flex-col items-center overflow-hidden">
-			<Navbar onContactClick={handleOpenContactModal} onWipClick={handleOpenWipModal} />
+		<BrowserRouter>
+			<div className="flex flex-col items-center overflow-hidden">
+				<Navbar onContactClick={handleOpenContactModal} onWipClick={handleOpenWipModal} />
 
-			<Home onWipClick={handleOpenWipModal} />
+				<Routes>
+					<Route path="/" element={<Home onWipClick={handleOpenWipModal} />} />
 
-			<Footer />
+					<Route path="/pecas" element={<PiecesPage />} />
+				</Routes>
 
-			<AnimatePresence>{isContactModalOpen && <ContactCardModal onClose={handleCloseContactModal} />}</AnimatePresence>
+				<Footer />
 
-			<AnimatePresence>{isWipModalOpen && <WorkInProgressModal onClose={handleCloseWipModal} />}</AnimatePresence>
-		</div>
+				<AnimatePresence>{isContactModalOpen && <ContactCardModal onClose={handleCloseContactModal} />}</AnimatePresence>
+
+				<AnimatePresence>{isWipModalOpen && <WorkInProgressModal onClose={handleCloseWipModal} />}</AnimatePresence>
+			</div>
+		</BrowserRouter>
 	);
 }
 

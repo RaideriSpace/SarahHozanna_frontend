@@ -4,6 +4,10 @@
   font-family: "nunito", sans-serif;
 }
 
+nav ul li {
+  cursor: pointer;
+}
+
 /* 3. Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {

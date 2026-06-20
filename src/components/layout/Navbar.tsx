@@ -5,6 +5,7 @@ import { AnimatePresence, motion } from "motion/react";
 
 import logo from "../../assets/logo.svg";
 import useMenuHamburguer from "../../hooks/useMenuHamburguer";
+import { useNavigate } from "react-router-dom";
 
 interface NavbarProps {
 	onContactClick: () => void;
@@ -14,6 +15,7 @@ interface NavbarProps {
 export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 	const [open, setOpen] = useState(false);
 	const menuHamburguer = useMenuHamburguer();
+	const navigate = useNavigate();
 
 	const toggleMenu = useCallback(() => setOpen((prevOpen) => !prevOpen), []);
 	const closeMenu = useCallback(() => setOpen(false), []);
@@ -28,14 +30,12 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 		};
 	}, [open, menuHamburguer]);
 
-	const handleNavigationClick = useCallback(
-		(action: () => void) => {
-			action();
-			if (menuHamburguer && action !== onContactClick && action !== onWipClick) {
-				closeMenu();
-			}
+	const goTo = useCallback(
+		(path: string) => {
+			navigate(path);
+			closeMenu();
 		},
-		[menuHamburguer, closeMenu],
+		[navigate, closeMenu],
 	);
 
 	return (
@@ -51,23 +51,23 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 				:	<nav className="md:cols-start-1 md:col-span-5 pt-8">
 						<ul className="flex gap-6 md:justify-self-center lg:justify-self-start">
 							<li className="menu__link text-gray-600 before:bg-primary-400">
-								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
+								<button onClick={() => onWipClick()} className="cursor-pointer">
 									Sobre Mim
 								</button>
 							</li>
 
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
-								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
+								<button onClick={() => goTo("/pecas")} className="cursor-pointer">
 									Peças
 								</button>
 							</li>
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
-								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
+								<button onClick={() => onWipClick()} className="cursor-pointer">
 									Sob Medida
 								</button>
 							</li>
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
-								<button onClick={() => handleNavigationClick(onWipClick)} className="cursor-pointer">
+								<button onClick={() => onWipClick()} className="cursor-pointer">
 									Políticas
 								</button>
 							</li>
@@ -75,7 +75,12 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 					</nav>
 				}
 
-				<img src={logo} alt="Logo" className="py-2 md:py-0 col-span-12 md:cols-start-6 md:col-span-2  justify-self-center w-37 2xl:w-44" />
+				<img
+					src={logo}
+					onClick={() => goTo("/")}
+					alt="Logo"
+					className="py-2 md:py-0 col-span-12 md:cols-start-6 md:col-span-2 cursor-pointer justify-self-center w-37 2xl:w-44"
+				/>
 
 				<AnimatePresence>
 					{menuHamburguer && open && (
@@ -91,25 +96,24 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 								exit={{ opacity: 0, transition: { duration: 0.06 } }}>
 								<div>
 									<button
-										onClick={() => handleNavigationClick(onContactClick)}
-										className="transition-all duration-500 contact-mobile w-full text-end bg-primary-200 text-gray-600 focus:bg-primary-800 focus:text-gray-200 px-6 py-2 rounded-xl">
+										onClick={() => onContactClick()}
+										className="transition-all duration-500 contact-mobile w-full text-end bg-primary-500 text-light-200 focus:bg-primary-800 focus:text-primary-100 px-6 py-2 rounded-xl">
 										<span>Contato</span>
 									</button>
 								</div>
 								<hr className="w-full py-1 text-primary-300" />
 								<ul className="flex flex-col gap-4 text-right w-fit">
 									<li className="menu__link text-gray-600 before:bg-primary-200">
-										<button onClick={() => handleNavigationClick(onWipClick)}>Sobre Mim</button>
+										<button onClick={() => onWipClick()}>Sobre Mim</button>
 									</li>
 									<li className="menu__link text-gray-600 before:bg-primary-200">
-										<button onClick={() => handleNavigationClick(onWipClick)}> Peças</button>{" "}
+										<button onClick={() => goTo("/pecas")}> Peças</button>
 									</li>
 									<li className="menu__link text-gray-600 before:bg-primary-200">
-										<button onClick={() => handleNavigationClick(onWipClick)}> Sob Medida </button>
+										<button onClick={() => onWipClick()}> Sob Medida </button>
 									</li>
 									<li className="menu__link text-gray-600 before:bg-primary-200">
-										{" "}
-										<button onClick={() => handleNavigationClick(onWipClick)}>Políticas</button>{" "}
+										<button onClick={() => onWipClick()}>Políticas</button>
 									</li>
 								</ul>
 							</motion.div>
@@ -120,7 +124,7 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 				{!menuHamburguer && (
 					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4">
 						<button
-							onClick={() => handleNavigationClick(onContactClick)}
+							onClick={() => onContactClick()}
 							className="contact text-gray-600 hover:text-white before:bg-primary-200 hover:before:bg-primary-400 active:text-gray-200 active:before:bg-primary-800">
 							<span>Contato</span>
 						</button>

@@ -22,7 +22,7 @@ export const AvaliationCard: FC<AvaliationCardProps> = ({ avaliation }) => {
 
 	return (
 		<>
-			<article className="flex h-full flex-col rounded-xl border border-primary-300 bg-linear-to-br from-primary-100 to-primary-200 p-5 shadow-md transition-all duration-300 hover:shadow-xl">
+			<article className="w-full flex px-4 h-full flex-col rounded-xl border border-primary-300 bg-linear-to-br from-primary-100 to-primary-200 p-5 shadow-md transition-all duration-300 hover:shadow-xl">
 				<header className="mb-4 flex items-start justify-between gap-3">
 					<div className="flex flex-col gap-2 md:flex-row">
 						<h3 className="text-lg font-bold text-dark-800">{avaliation.nome}</h3>
