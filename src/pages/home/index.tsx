@@ -11,7 +11,7 @@ interface HomeProps {
 
 export const Home: FC<HomeProps> = ({ onWipClick }) => {
 	return (
-		<main className="flex gap-16 flex-col items-center overflow-hidden max-w-475">
+		<main className="flex gap-16 flex-col w-screen items-center overflow-hidden max-w-475">
 			<HeroSection onWipClick={onWipClick} />
 
 			<HandmadeSection />

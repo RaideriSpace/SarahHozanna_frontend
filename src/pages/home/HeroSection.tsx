@@ -7,7 +7,7 @@ interface HeroProps {
 export const HeroSection:FC<HeroProps> = ( { onWipClick } ) => {
 	return (
 		<section className="hero w-full h-screen min-h-159 max-h-263 md:h-screen">
-			<div className="px-8 pt-35 md:pl-10 lg:pl-20 lg:pt-[12%] flex flex-col gap-2">
+			<div className="px-4 pt-35 md:pl-10 lg:pl-20 lg:pt-[12%] flex flex-col gap-2">
 				<h1 className="glow text-7xl font-bold text-white text-shadow-[0_0_5px_#000000] md:text-shadow-none">PEÇAS ÚNICAS</h1>
 				<h2 className="delicate text-5xl font-bold text-white pb-4 text-shadow-[0_0_5px_#000000] md:text-shadow-none">Para Momentos Únicos</h2>
 				<p className="text-base w-2/3 lg:w-2/5 md:text-xl pb-5 text-black md:text-white text-shadow-[0_0_3px_#ffffff] md:text-shadow-[0_0_6px_#000000]">

@@ -7,7 +7,7 @@ interface AboutProps {
 
 export const AboutSection: FC<AboutProps> = ({ onWipClick }) => {
 	return (
-		<section className="flex flex-col px-16 pb-8 items-center bg-primary-100 md:py-8 md:rounded-tr-none">
+		<section className="flex flex-col pb-8 items-center bg-primary-100 md:py-8 md:rounded-tr-none">
 			<div className="flex flex-col md:flex-row justify-center items-center gap-8">
 				<div className="order-1 w-full px-4 flex flex-col gap-8 md:gap-16 md:order-0 md:w-[50%] md:px-0">
 					<h2 className="text-center text-3xl font-bold"> Quem Sou </h2>
