@@ -36,7 +36,7 @@ export const AvaliationCarousel: FC<AvaliationCarouselProps> = ({ avaliations })
 			<div className="overflow-hidden" ref={emblaRef}>
 				<div className="flex">
 					{avaliations.map((avaliation, index) => (
-						<div key={`${avaliation.nome}-${index}`} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] md:px-2">
+						<div key={`${avaliation.nome}-${index}`} className="min-w-0 flex-[0_0_100%] sm:flex-[0_0_50%] px-2">
 							<AvaliationCard avaliation={avaliation} />
 						</div>
 					))}
