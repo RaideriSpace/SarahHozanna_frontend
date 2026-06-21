@@ -1,7 +1,7 @@
 import type { FC } from "react";
 import { HeroSection } from "./HeroSection";
 import { HandmadeSection } from "./HandmadeSection";
-import { PiecesSection } from "./PiecesSection";
+import { CollectionSection } from "./CollectionSection";
 import { FeedbackSection } from "./FeedbackSection";
 import { AboutSection } from "./AboutSection";
 
@@ -16,7 +16,7 @@ export const Home: FC<HomeProps> = ({ onWipClick }) => {
 
 			<HandmadeSection />
 
-			<PiecesSection onWipClick={onWipClick} />
+			<CollectionSection onWipClick={onWipClick} />
 
 			<FeedbackSection onWipClick={onWipClick} />
 

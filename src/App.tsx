@@ -6,8 +6,9 @@ import { AnimatePresence } from "motion/react";
 import WorkInProgressModal from "./components/modals/WorkInProgressModal";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PiecesPage from "./pages/pieces";
+import CollectionPage from "./pages/collection";
 import { Navbar } from "./components/layout/Navbar";
+import RouteEffects from "./components/layout/RouteEffects";
 
 function App() {
 	const { isOpen: isContactModalOpen, openModal: handleOpenContactModal, closeModal: handleCloseContactModal } = useModal();
@@ -16,13 +17,15 @@ function App() {
 
 	return (
 		<BrowserRouter>
+      <RouteEffects />
+
 			<div className="flex flex-col items-center overflow-hidden">
 				<Navbar onContactClick={handleOpenContactModal} onWipClick={handleOpenWipModal} />
 
 				<Routes>
 					<Route path="/" element={<Home onWipClick={handleOpenWipModal} />} />
 
-					<Route path="/pecas" element={<PiecesPage />} />
+					<Route path="/colecao" element={<CollectionPage />} />
 				</Routes>
 
 				<Footer />

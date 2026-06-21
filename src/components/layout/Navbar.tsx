@@ -50,20 +50,19 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 					</button>
 				:	<nav className="md:cols-start-1 md:col-span-5 pt-8">
 						<ul className="flex gap-6 md:justify-self-center lg:justify-self-start">
-							<li className="menu__link text-gray-600 before:bg-primary-400">
-								<button onClick={() => onWipClick()} className="cursor-pointer">
-									Sobre Mim
-								</button>
-							</li>
-
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
-								<button onClick={() => goTo("/pecas")} className="cursor-pointer">
-									Peças
+								<button onClick={() => goTo("/colecao")} className="cursor-pointer">
+									Coleção
 								</button>
 							</li>
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
 								<button onClick={() => onWipClick()} className="cursor-pointer">
 									Sob Medida
+								</button>
+							</li>
+							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
+								<button onClick={() => onWipClick()} className="cursor-pointer">
+									Noivas
 								</button>
 							</li>
 							<li className="menu__link text-gray-600 before:bg-primary-400 cursor-pointer">
@@ -104,13 +103,16 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 								<hr className="w-full py-1 text-primary-300" />
 								<ul className="flex flex-col gap-4 text-right w-fit">
 									<li className="menu__link text-gray-600 before:bg-primary-200">
-										<button onClick={() => onWipClick()}>Sobre Mim</button>
-									</li>
-									<li className="menu__link text-gray-600 before:bg-primary-200">
-										<button onClick={() => goTo("/pecas")}> Peças</button>
+										<button onClick={() => goTo("/colecao")}>Coleção</button>
 									</li>
 									<li className="menu__link text-gray-600 before:bg-primary-200">
 										<button onClick={() => onWipClick()}> Sob Medida </button>
+									</li>
+									<li className="menu__link text-gray-600 before:bg-primary-200">
+										<button onClick={() => onWipClick()}> Noivas </button>
+									</li>
+									<li className="menu__link text-gray-600 before:bg-primary-200">
+										<button onClick={() => onWipClick()}>Sobre Mim</button>
 									</li>
 									<li className="menu__link text-gray-600 before:bg-primary-200">
 										<button onClick={() => onWipClick()}>Políticas</button>
@@ -122,7 +124,12 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 				</AnimatePresence>
 
 				{!menuHamburguer && (
-					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4">
+					<div className="md:cols-start-9 md:col-span-5 justify-self-end pt-4 flex gap-4">
+						<button
+							onClick={() => onWipClick()}
+							className="cursor-pointer menu__link text-gray-600 before:bg-primary-400 h-full self-end justify-end">
+							<p className="">Sobre Mim</p>
+						</button>
 						<button
 							onClick={() => onContactClick()}
 							className="contact text-gray-600 hover:text-white before:bg-primary-200 hover:before:bg-primary-400 active:text-gray-200 active:before:bg-primary-800">

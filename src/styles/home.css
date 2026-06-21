@@ -291,7 +291,7 @@
 
 .animated-button_about:active {
 	scale: 0.95;
-	box-shadow: 0 0 0 4px var(--color-secondary-300);
+	box-shadow: 0 0 0 4px var(--color-accent-300);
 }
 
 .animated-button_about:hover .circle_about {

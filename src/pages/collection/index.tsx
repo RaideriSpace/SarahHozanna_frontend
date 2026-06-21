@@ -39,7 +39,7 @@ const mockPieces: Piece[] = [
 	},
 ];
 
-export const PiecesPage: FC = () => {
+export const CollectionPage: FC = () => {
 	return (
 		<section className="relative min-h-screen overflow-hidden py-16 mt-10">
 			{/* FUNDO ORGÂNICO */}
@@ -99,4 +99,4 @@ export const PiecesPage: FC = () => {
 	);
 };
 
-export default PiecesPage;
+export default CollectionPage;

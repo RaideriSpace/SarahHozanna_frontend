@@ -43,6 +43,19 @@
 	animation: scroll-reverse 300s linear infinite;
 }
 
+.animate-spin-slow {
+	animation: spin-slow 14s linear infinite;
+}
+
+@keyframes spin-slow {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
 @keyframes scroll {
 	0% {
 		transform: translateX(0);
