@@ -17,7 +17,7 @@ export const FeedbackSection: FC<FeedbackProps> = ({ onWipClick }) => {
 
 			<div className="self-center flex flex-col md:flex-row gap-4">
 				<button onClick={onWipClick} className="buttondepo">
-					Peças Prontas
+					Coleção
 				</button>
 				<button onClick={onWipClick} className="buttondepo">
 					Sob Medida
