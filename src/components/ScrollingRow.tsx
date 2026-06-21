@@ -12,7 +12,7 @@ interface ScrollingRowProps {
 const imgClass =
 	"m-0 block h-[260px] w-[180px] flex-shrink-0 cursor-pointer select-none object-cover object-center opacity-50 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:w-[240px]";
 
-export const ScrollingRow = ({ clothes, title, tag, direction = "left" }: ScrollingRowProps) => (
+export const ScrollingRow = ({ clothes, title, direction = "left" }: ScrollingRowProps) => (
 	<motion.div
 		initial={{ opacity: 0, y: 24 }}
 		whileInView={{ opacity: 1, y: 0 }}
