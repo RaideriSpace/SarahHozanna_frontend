@@ -78,7 +78,7 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 					src={logo}
 					onClick={() => goTo("/")}
 					alt="Logo"
-					className="py-2 md:py-0 col-span-12 md:cols-start-6 md:col-span-2 cursor-pointer justify-self-center w-37 2xl:w-44"
+					className="py-2 md:py-0 col-span-12 md:cols-start-6 md:col-span-2 cursor-pointer justify-self-center w-30"
 				/>
 
 				<AnimatePresence>
