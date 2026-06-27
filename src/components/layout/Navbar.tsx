@@ -84,7 +84,7 @@ export const Navbar: FC<NavbarProps> = ({ onContactClick, onWipClick }) => {
 				<AnimatePresence>
 					{menuHamburguer && open && (
 						<motion.nav
-							className="transition-all bg-white w-1/2 md:w-1/4 absolute right-0 top-24 md:top-20 px-6 py-4 rounded-b-2xl justify-items-end shadow-[-2px_3px_2px_#00000050]"
+							className="transition-all bg-white w-1/2 md:w-1/4 absolute right-0 top-20 md:top-18 px-6 py-4 rounded-b-2xl justify-items-end shadow-[-2px_3px_2px_#00000050]"
 							initial={{ height: "0px" }}
 							animate={{ height: "auto" }}
 							exit={{ height: "0px" }}

@@ -1,92 +1,61 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
+
+const cards = [
+	{
+		bgClass: "bg-img-1",
+		title: "Criado Para Você",
+		text: "Cada peça é desenvolvida com atenção plena ao seu estilo, suas medidas e a história que deseja contar. Do primeiro atendimento aos acabamentos finais, cada etapa é conduzida com cuidado para criar algo verdadeiramente seu.",
+	},
+	{
+		bgClass: "bg-img-4",
+		title: "A Diferença do Sob Medida",
+		text: "Modelagem, tecidos, acabamentos e caimento são desenvolvidos de forma personalizada. O resultado é uma criação que valoriza sua individualidade — peças que unem conforto, elegância e autenticidade em cada detalhe.",
+	},
+	{
+		bgClass: "bg-img-6",
+		title: "Qualidade em Cada Etapa",
+		text: "Da escolha dos materiais aos remates finais, todo o processo é conduzido com rigor para garantir conforto, beleza e durabilidade. Peças pensadas para acompanhar diferentes momentos da sua vida e permanecer relevantes ao longo dos anos.",
+	},
+];
 
 export const HandmadeSection = () => {
-	const [textSize, setTextSize] = useState<number>(0);
-	const textRef = useRef<HTMLDivElement>(null);
-
-	useLayoutEffect(() => {
-		if (!textRef.current) return;
-
-		const resizeObserver = new ResizeObserver((entries) => {
-			for (let entry of entries) {
-				setTextSize(entry.contentRect.height);
-			}
-		});
-
-		resizeObserver.observe(textRef.current);
-
-		return () => resizeObserver.disconnect();
-	}, []);
-
-	const imageSideClass =
-		"w-[20vh] aspect-[2/3] rounded-2xl opacity-15 hover:opacity-100 hover:scale transition-all duration-300 md:w-[25v] lg:w-3/7 lg:opacity-45 xl:w-55";
-
 	return (
-		<section style={{ height: textSize > 0 ? `${textSize}px` : "auto" }} className={`w-full max-w-360 2xl:pb-20 flex justify-center lg:px-20`}>
-			<div className="w-full h-full self-start flex flex-col gap-80 pt-30 md:gap-30 md:pt-15 lg:gap-[20vh] lg:items-end xl:pt-20 xl:gap-20  ">
-				<div className={`bg-img-1 rotate-6 self-start ${imageSideClass}`}></div>
-				<div className={`bg-img-3 -rotate-6 self-start ${imageSideClass}`}></div>
-				<div className={`bg-img-5 rotate-6 self-start ${imageSideClass}`}></div>
-			</div>
+		<section className="w-full max-w-360 px-4 pb-8 md:px-10 lg:px-20">
+			<motion.div
+				initial={{ opacity: 0, y: 20 }}
+				whileInView={{ opacity: 1, y: 0 }}
+				viewport={{ once: true, amount: 0.4 }}
+				transition={{ duration: 0.6, ease: "easeOut" }}
+				className="mb-6 text-center md:mb-8">
+				<span className="text-xs font-bold tracking-[0.3em] text-secondary-500 uppercase">Ateliê</span>
+				<h2 className="mt-2 text-4xl font-bold text-dark-400 md:text-5xl">A Arte do Feito à Mão</h2>
+				<span aria-hidden="true" className="mx-auto mt-4 block h-1 w-16 rounded-full bg-accent-400" />
+			</motion.div>
 
-			<div ref={textRef} id="text" className="absolute lg:w-3/7 px-4 justify-center">
-				<div className="text-center">
-					<h2 className="text-4xl font-bold"> A Alma em Cada Ponto </h2>
-					<h3 className="pb-6 text-2xl font-medium"> A Magia das Peças Feitas à Mão </h3>
-				</div>
+			<div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+				{cards.map(({ bgClass, title, text }, i) => (
+					<motion.div
+						key={title}
+						initial={{ opacity: 0, y: 32 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true, amount: 0.25 }}
+						transition={{ duration: 0.6, delay: i * 0.12, ease: "easeOut" }}
+						className={`group relative overflow-hidden rounded-2xl ${bgClass} aspect-4/3 md:aspect-3/4`}>
+						<div className="absolute inset-0 bg-linear-to-t from-dark-700/95 via-dark-700/60 to-dark-700/70 md:via-dark-700/30 md:to-transparent" />
 
-				<p>
-					Em um mundo dominado pela produção em massa e pelo imediatismo do fast fashion, existe um movimento silencioso, mas profundamente poderoso,
-					que resgata a essência do vestir: o <strong> feito à mão</strong>. Quando falamos de uma peça de vestuário artesanal, não estamos nos
-					referindo apenas a fios, tecidos ou agulhas. Estamos falando de um processo íntimo, onde cada ponto carrega consigo uma carga imensa de{" "}
-					<strong>amor, carinho e cuidado</strong>.
-				</p>
-				<br />
-				<p>
-					Diferente das máquinas industriais que replicam padrões em milissegundos, as mãos de um artesão trabalham no ritmo do coração. Existe uma
-					intenção genuína por trás de cada escolha, desde a seleção da matéria-prima até o arremate final. Esse cuidado se traduz em uma qualidade
-					sensorial que a tecnologia ainda não consegue replicar: o toque macio, o caimento ajustado com precisão e a resistência de algo que foi
-					construído para durar gerações.
-				</p>
+						<div className="absolute inset-0 bg-dark-600/0 transition-colors duration-500 md:group-hover:bg-dark-600/30" />
 
-				<h4 className="py-8 text-2xl font-semibold text-center"> Por que o Artesanal é Tão Importante? </h4>
-				<p>
-					A importância das peças feitas à mão vai muito além da estética. Elas representam uma resistência cultural e emocional através de pilares
-					fundamentais:
-				</p>
-				<ul className="flex flex-col gap-6 pt-3 text-center">
-					<li>
-						<strong>Singularidade:</strong> <br /> Nenhuma peça manual é idêntica à outra. Mesmo seguindo o mesmo molde, a pressão do ponto ou a
-						sutileza do corte tornam aquela peça única no mundo, assim como quem a veste.
-					</li>
-					<li>
-						<strong>Sustentabilidade e Ética:</strong> <br /> O artesanato respeita o tempo da natureza e do ser humano. Promove um consumo
-						consciente, valorizando o comércio local e reduzindo o desperdício têxtil.
-					</li>
-					<li>
-						<strong>Conexão Humana:</strong> <br /> Ao vestir algo feito à mão, você carrega a história de quem o produziu. É um diálogo invisível
-						entre o criador e o usuário, uma celebração do talento e da paciência.
-					</li>
-					<li>
-						<strong>Autoestima e Conforto:</strong> <br /> Há um carinho especial em saber que alguém dedicou horas de sua vida para criar algo belo.
-						Esse afeto é sentido no corpo, proporcionando um conforto que transpassa o tecido.
-					</li>
-				</ul>
-				<h4 className="py-8 text-2xl font-semibold text-center"> O Luxo da Atenção aos Detalhes </h4>
-				<p>
-					O verdadeiro luxo contemporâneo não está na logomarca, mas na atenção. O cuidado de quem molda uma gola, borda um detalhe ou tece uma trama
-					de tricô reflete um compromisso com a excelência que as grandes fábricas ignoram. É a celebração do erro humano que se torna detalhe
-					charmoso, da textura que conta uma história e da peça que se torna uma extensão da identidade de quem a possui. <br /> <br /> Valorizar o
-					vestuário artesanal é, em última análise, valorizar a humanidade. É escolher colocar no mundo — e sobre a própria pele — algo que nasceu do
-					desejo de criar beleza com as próprias mãos, garantindo que a tradição do cuidado nunca saia de moda.
-				</p>
-			</div>
-
-			<div className="w-full h-full lg:items-start flex flex-col gap-80 pt-100 md:gap-30 md:pt-40 lg:gap-[20vh] xl:pt-20 xl:gap-20">
-				<div className={`bg-img-2 -rotate-6 self-end ${imageSideClass}`}></div>
-				<div className={`bg-img-4 rotate-6 self-end ${imageSideClass}`}></div>
-				<div className={`bg-img-6 -rotate-6 self-end ${imageSideClass}`}></div>
+						<div className="absolute bottom-0 left-0 right-0 p-6 md:translate-y-2 md:transition-transform md:duration-500 md:group-hover:translate-y-0">
+							<h3 className="glow mb-3 text-xl text-light-200 text-center cursor-default">{title}</h3>
+							<p className="text-sm leading-relaxed text-light-400 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100 text-center cursor-default">
+								{text}
+							</p>
+						</div>
+					</motion.div>
+				))}
 			</div>
 		</section>
 	);
-}
+};
+
+export default HandmadeSection;
